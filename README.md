@@ -30,10 +30,11 @@ composed by millions of online articles classified in several categories like bi
 If time allows, other datasets and options will be explored.
 
 ## Work Organisation
-1. Dataset Collection
-2. Desingning and Buidling the CNN
-3. Training and fine-tuning the network
-4. Result analysis
+1. How-Tos
+2. Dataset Collection, Resource planning and environment setting
+2. Desingning and Buidling the CNN 
+3. Experiments
+4. Result Analysis
 5. Application
 6. Report + Presentation
 
