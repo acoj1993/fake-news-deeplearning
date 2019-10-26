@@ -30,7 +30,8 @@ composed by millions of online articles classified in several categories like bi
 If time allows, other datasets and options will be explored.
 
 ## Work Organisation
-1. How-Tos
+The work for this project is divided into the following issues:
+1. [How-Tos] (https://github.com/acoj1993/fake-news-deeplearning/issues/1) (Time estimate: 16h)
 2. Dataset Collection, Resource planning and environment setting
 2. Desingning and Buidling the CNN 
 3. Experiments
