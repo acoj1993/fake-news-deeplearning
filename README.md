@@ -35,7 +35,7 @@ If time allows, other datasets and options will be explored.
 The work for this project is divided into the following issues:
 1. [How-Tos](https://github.com/acoj1993/fake-news-deeplearning/issues/1) (Time estimate: 16h)
 2. [Dataset Collection](https://github.com/acoj1993/fake-news-deeplearning/issues/2), [Resource planning and environment setting](https://github.com/acoj1993/fake-news-deeplearning/issues/3) (Time estimate: 4h + 12h)
-2. [Desingning and Buidling the CNN](https://github.com/acoj1993/fake-news-deeplearning/issues/4) (Time estimate: 48h) 
+2. [Desingning and Buidling the CNN](https://github.com/acoj1993/fake-news-deeplearning/issues/4) (Time estimate: 32h) 
 3. [Experiments](https://github.com/acoj1993/fake-news-deeplearning/issues/5) (Time estimate: 16h)
 5. [Application](https://github.com/acoj1993/fake-news-deeplearning/issues/6) (Time stimate: 12h)
 6. [Report + Presentation](https://github.com/acoj1993/fake-news-deeplearning/issues/7) (Time estimate: 12h)
