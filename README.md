@@ -1,7 +1,9 @@
 # Fake news detection using Deep Learning
 ## Overview
 This repository contains all artifacts used for the class Applied Deep Learning. The topic of this project is **NLP - Fake news Detection** and is primarily based on the following two papers:
+
 [1]  Alvaro Ibrain Rodriguez and Lara Lloret Iglesias. [Fake news detection using deep learning, 2019.](https://arxiv.org/abs/1910.03496)
+
 [2]  Yang Yang, Lei Zheng, Jiawei Zhang, Qingcai Cui, Zhoujun Li, and Philip S. Yu. [TI-CNN: convolutional neural networks for fake news detection, 2018.](https://arxiv.org/abs/1806.00749)
 
 ## Problem Definition and Solution Approach
