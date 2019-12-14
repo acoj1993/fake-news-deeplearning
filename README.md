@@ -1,4 +1,7 @@
 # Fake news detection using Deep Learning
+
+# Exercuse 1 - Initiate
+
 ## Overview
 This repository contains all artifacts used for the class Applied Deep Learning. The topic of this project is **NLP - Fake news Detection** and is primarily based on the following two papers:
 
@@ -40,3 +43,19 @@ The work for this project is divided into the following issues:
 5. [Application](https://github.com/acoj1993/fake-news-deeplearning/issues/6) (Time stimate: 12h)
 6. [Report + Presentation](https://github.com/acoj1993/fake-news-deeplearning/issues/7) (Time estimate: 12h)
 
+
+# Exercuse 2 - Hacking
+
+## The target
+In this section the target of the exercise 2 will be explained.
+
+## The results
+In this section the achieved results will be presented.
+
+## The remaining work 
+In this section the remaining and future possible work will be discussed.
+
+## The struggles
+In this section the struggles while doing the exercises will be presented.
+
+## Work Organisation
