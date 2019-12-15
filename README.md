@@ -44,18 +44,39 @@ The work for this project is divided into the following issues:
 6. [Report + Presentation](https://github.com/acoj1993/fake-news-deeplearning/issues/7) (Time estimate: 12h)
 
 
-# Exercuse 2 - Hacking
+# Exercise 2 - Hacking
+
+## Overview
+In the following sections I will briefly deliver the goals and results for the exercise 2.
 
 ## The target
-In this section the target of the exercise 2 will be explained.
+After carefully reading and examining the papers specifed above, I decided that my goals (checkpoints) are the following.
+
+1. Since I had almost no experience with building and designing neural networks, I first had to understand and learn how to do it. This included many tutorials, documentations, github repositories etc.  
+
+2. The first (real) checkpoint for the project was to re-implement the work done in [1]. The main reason to focus more on [1] (instead of on [2]) is that [1] repots slightly better results. On the plus side, the paper is new and, honestly, their approach seemed a bit more interesting to me. 
+
+3. Finally, I wanted to improve their results. I wanted to (based on the network in [1]) design and build my own network that would probably be more complex, but with better accuracy.
 
 ## The results
-In this section the achieved results will be presented.
+As far as I see it, I succesfully accomplished all three of my target goals. After I acquired enough skills, I successfully re-implemented the CNN from [1] well within my estimated time. At that point, I had to brainstorm possible changes and improvements. I first tried to tweak some parameters and settings, just to see what will happen. However, this approach did not lead to a significant and consistant change/improvement. The results were highly dependent on the randomness of the split and also on the size of the splits.
+
+The approach in [1] is to learn to distinguish between real and fake news by feeding the network with text (body) and title feature. The CNN in [2] does it with image and title. But I would argue, that the weight of importance for a successful detection of the fake news is probably much higher on the text rather than on the title. This is why, I decided to focus primarly on the text feature. 
+
+After searching for inspiration and ideas, I designed my network to look like this:
+-- todo -- insert image
+
+Most of the hyper-parameters remained the same as in [1]. 
+The network was trained over 5 epochs with accuracy results on the test split ranging from 0.965 to 0.995. These results significantly beat the results of the CNN in [1]. However, one has to notice the slight increase in complexity (going from two to three branches).
 
 ## The remaining work 
-In this section the remaining and future possible work will be discussed.
+Sadly the time scope for the project did not allow to go further with my network and hence some options are left untouched, even though they are, by all means, not crucial for this project. 
+
+- No fine-tuning by using Bayesian Optimization was conducted and the "big" Fake News Corpus dataset was not used at all. 
+- Some further "smart" design changes could have been tested on the network. 
 
 ## The struggles
-In this section the struggles while doing the exercises will be presented.
+TODO
 
 ## Work Organisation
+TODO
