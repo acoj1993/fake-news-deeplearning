@@ -80,3 +80,10 @@ I cannot really report that I experienced any unforseenable struggles. Naturally
 2. [Desingning and Buidling the CNN](https://github.com/acoj1993/fake-news-deeplearning/issues/4) (Actual time spent: 34h) 
 3. [Experiments](https://github.com/acoj1993/fake-news-deeplearning/issues/5) (Actual time spent: 8h)
 4. Submission of the exercise (Actual time spent: 3h)
+
+## Summary
+Finally to summarize the deliverables:
+1. The error metric that was the most important for me was the accuracy on the test data.
+2. The target of that error metric was to beat the result achieved in [1] and [2] with a relatively similar model
+3. The best achieved value showed promosing results, outperforming both results with an average accuracy of 97-98% on test data (compared to 94% and 93% reported in [1] and [2])
+4. The amounts of time spent on each task are represented in the section **Work Organisation**.
