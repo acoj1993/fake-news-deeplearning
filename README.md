@@ -59,24 +59,24 @@ After carefully reading and examining the papers specifed above, I decided that 
 3. Finally, I wanted to improve their results. I wanted to (based on the network in [1]) design and build my own network that would probably be more complex, but with better accuracy.
 
 ## The results
-As far as I see it, I succesfully accomplished all three of my target goals. After I acquired enough skills, I successfully re-implemented the CNN from [1] well within my estimated time. At that point, I had to brainstorm possible changes and improvements. I first tried to tweak some parameters and settings, just to see what will happen. However, this approach did not lead to a significant and consistant change/improvement. The results were highly dependent on the randomness of the split and also on the size of the splits.
+As far as I see it, I succesfully accomplished all three of my target goals. After I acquired enough skills, I successfully re-implemented the CNN from [1] well within my estimated time. At that point, I had to brainstorm possible changes and improvements. I first tried to tweak some parameters and settings, just to see what will happen. However, this approach did not lead to a significant and consistant accuracy improvement. The results were highly dependent on the randomness of the split and also on the size of the splits.
 
-The approach in [1] is to learn to distinguish between real and fake news by feeding the network with text (body) and title feature. The CNN in [2] does it with image and title. But I would argue, that the weight of importance for a successful detection of the fake news is probably much higher on the text rather than on the title. This is why, I decided to focus primarly on the text feature. 
+The next attempt was to try to redisgn the network to have better accuracy on the test split. Note that the approach in [1] is to learn to distinguish between real and fake news by feeding the network with text (body) and title feature, whereas the CNN in [2] does it with image and title. My approach however puts the entire weight solely on the text feature. At least for this datasets, it turns out that training on the text feature has much higher impact on accuracy than title and image feature. After some reasearch and trial and error the network architecture looks like this:
 
-After searching for inspiration and ideas, I designed my network to look like this:
--- todo -- insert image
 
 Most of the hyper-parameters remained the same as in [1]. 
 The network was trained over 5 epochs with accuracy results on the test split ranging from 0.965 to 0.995. These results significantly beat the results of the CNN in [1]. However, one has to notice the slight increase in complexity (going from two to three branches).
 
 ## The remaining work 
-Sadly the time scope for the project did not allow to go further with my network and hence some options are left untouched, even though they are, by all means, not crucial for this project. 
-
-- No fine-tuning by using Bayesian Optimization was conducted and the "big" Fake News Corpus dataset was not used at all. 
-- Some further "smart" design changes could have been tested on the network. 
+Duo to time constraint for this project, I did not get to fine-tune the network by using Bayesian Optimization and Fake News Corpus dataset.
 
 ## The struggles
-TODO
+I cannot really report that I experienced any unforseenable struggles. Naturally, the experimenting part of the project costs the most time and it can be stressful if one does not get any improving results. This was a limiting part. but other than that, everything went as expected.
+
 
 ## Work Organisation
-TODO
+1. [How-Tos](https://github.com/acoj1993/fake-news-deeplearning/issues/1) (Actual time spent: 8h)
+2. [Dataset Collection](https://github.com/acoj1993/fake-news-deeplearning/issues/2), [Resource planning and environment setting](https://github.com/acoj1993/fake-news-deeplearning/issues/3) (Actual time spent: 4h + 4h)
+2. [Desingning and Buidling the CNN](https://github.com/acoj1993/fake-news-deeplearning/issues/4) (Actual time spent: 34h) 
+3. [Experiments](https://github.com/acoj1993/fake-news-deeplearning/issues/5) (Actual time spent: 8h)
+4. Submission of the exercise (Actual time spent: 3h)
