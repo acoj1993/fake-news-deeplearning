@@ -64,7 +64,7 @@ As far as I see it, I successfully  accomplished all three of my target goals. A
 The next attempt was to try to redesign the network to have better accuracy on the test split. Note that the approach in [1] is to learn to distinguish between real and fake news by feeding the network with text (body) and title feature, whereas the CNN in [2] does it with image and title. My approach however puts the entire weight solely on the text feature. At least for this datasets, it turns out that training on the text feature has much higher impact on accuracy than title and image feature. After some research and trial and error the network architecture looks like this:
 
 <figure>    
-   <img src="https://github.com/acoj1993/fake-news-deeplearning/blob/master/model_extended.h5.png" width = "35%" height="50%">   	<figcaption>CNN architecture</figcaption>
+   <img src="https://github.com/acoj1993/fake-news-deeplearning/blob/master/model_extended.h5.png" width = "35%" height="50%">
 </figure>
 
 Most of the hyper-parameters remained the same as in [1]. 
@@ -75,7 +75,6 @@ Duo to time constraint for this project, I did not get to fine-tune the network 
 
 ## The struggles
 I cannot really report that I experienced any unforeseeable  struggles. Naturally, the experimenting part of the project costs the most time and it can be stressful if one does not get any improving results. This was a limiting part, but other than that, everything went as expected.
-
 
 ## Work Organization
 1. [How-Tos](https://github.com/acoj1993/fake-news-deeplearning/issues/1) (Actual time spent: 8h)
