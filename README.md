@@ -34,7 +34,7 @@ composed by millions of online articles classified in several categories like bi
 
 If time allows, other datasets and options will be explored.
 
-## Work Organisation
+## Work Organization
 The work for this project is divided into the following issues:
 1. [How-Tos](https://github.com/acoj1993/fake-news-deeplearning/issues/1) (Time estimate: 16h)
 2. [Dataset Collection](https://github.com/acoj1993/fake-news-deeplearning/issues/2), [Resource planning and environment setting](https://github.com/acoj1993/fake-news-deeplearning/issues/3) (Time estimate: 4h + 12h)
@@ -50,20 +50,22 @@ The work for this project is divided into the following issues:
 In the following sections I will briefly deliver the goals and results for the exercise 2.
 
 ## The target
-After carefully reading and examining the papers specifed above, I decided that my goals (checkpoints) are the following.
+After carefully reading and examining the papers specified above, I decided that my goals (checkpoints) are the following.
 
 1. Since I had almost no experience with building and designing neural networks, I first had to understand and learn how to do it. This included many tutorials, documentations, github repositories etc.  
 
-2. The first (real) checkpoint for the project was to re-implement the work done in [1]. The main reason to focus more on [1] (instead of on [2]) is that [1] repots slightly better results. On the plus side, the paper is new and, honestly, their approach seemed a bit more interesting to me. 
+2. The first (real) checkpoint for the project was to re-implement the work done in [1]. The main reason to focus more on [1] (instead of on [2]) is that [1] reports slightly better results. On the plus side, the paper is new and, honestly, their approach seemed a bit more interesting to me. 
 
 3. Finally, I wanted to improve their results. I wanted to (based on the network in [1]) design and build my own network that would probably be more complex, but with better accuracy.
 
 ## The results
-As far as I see it, I succesfully accomplished all three of my target goals. After I acquired enough skills, I successfully re-implemented the CNN from [1] well within my estimated time. At that point, I had to brainstorm possible changes and improvements. I first tried to tweak some parameters and settings, just to see what will happen. However, this approach did not lead to a significant and consistant accuracy improvement. The results were highly dependent on the randomness of the split and also on the size of the splits.
+As far as I see it, I successfully  accomplished all three of my target goals. After I acquired enough skills, I successfully re-implemented the CNN from [1] well within my estimated time. At that point, I had to brainstorm possible changes and improvements. I first tried to tweak some parameters and settings, just to see what will happen. However, this approach did not lead to a significant and consistent accuracy improvement. The results were highly dependent on the randomness of the split and also on the size of the splits.
 
-The next attempt was to try to redisgn the network to have better accuracy on the test split. Note that the approach in [1] is to learn to distinguish between real and fake news by feeding the network with text (body) and title feature, whereas the CNN in [2] does it with image and title. My approach however puts the entire weight solely on the text feature. At least for this datasets, it turns out that training on the text feature has much higher impact on accuracy than title and image feature. After some reasearch and trial and error the network architecture looks like this:
+The next attempt was to try to redesign the network to have better accuracy on the test split. Note that the approach in [1] is to learn to distinguish between real and fake news by feeding the network with text (body) and title feature, whereas the CNN in [2] does it with image and title. My approach however puts the entire weight solely on the text feature. At least for this datasets, it turns out that training on the text feature has much higher impact on accuracy than title and image feature. After some research and trial and error the network architecture looks like this:
 
-![CNN architecture](https://github.com/acoj1993/fake-news-deeplearning/blob/master/model_extended.h5.png)
+<figure>    
+   <img src="https://github.com/acoj1993/fake-news-deeplearning/blob/master/model_extended.h5.png" width = "35%" height="50%">   	<figcaption>CNN architecture</figcaption>
+</figure>
 
 Most of the hyper-parameters remained the same as in [1]. 
 The network was trained over 5 epochs with accuracy results on the test split ranging from 0.965 to 0.995. These results beat the results of the CNN in [1]. However, one has to notice the slight increase in complexity (going from two to three branches).
@@ -72,10 +74,10 @@ The network was trained over 5 epochs with accuracy results on the test split ra
 Duo to time constraint for this project, I did not get to fine-tune the network by using Bayesian Optimization and Fake News Corpus dataset.
 
 ## The struggles
-I cannot really report that I experienced any unforseenable struggles. Naturally, the experimenting part of the project costs the most time and it can be stressful if one does not get any improving results. This was a limiting part. but other than that, everything went as expected.
+I cannot really report that I experienced any unforeseeable  struggles. Naturally, the experimenting part of the project costs the most time and it can be stressful if one does not get any improving results. This was a limiting part, but other than that, everything went as expected.
 
 
-## Work Organisation
+## Work Organization
 1. [How-Tos](https://github.com/acoj1993/fake-news-deeplearning/issues/1) (Actual time spent: 8h)
 2. [Dataset Collection](https://github.com/acoj1993/fake-news-deeplearning/issues/2), [Resource planning and environment setting](https://github.com/acoj1993/fake-news-deeplearning/issues/3) (Actual time spent: 4h + 4h)
 2. [Desingning and Buidling the CNN](https://github.com/acoj1993/fake-news-deeplearning/issues/4) (Actual time spent: 34h) 
@@ -86,5 +88,5 @@ I cannot really report that I experienced any unforseenable struggles. Naturally
 Finally to summarize the deliverables:
 1. The error metric that was the most important for me was the accuracy on the test data.
 2. The target of that error metric was to beat the result achieved in [1] and [2] with a relatively similar model
-3. The best achieved value showed promosing results, outperforming both results with an average accuracy of 97-98% on test data (compared to 94% and 93% reported in [1] and [2])
-4. The amounts of time spent on each task are represented in the section **Work Organisation**.
+3. The best achieved value showed promising results, outperforming both results with an average accuracy of 97-98% on test data (compared to 94% and 93% reported in [1] and [2])
+4. The amounts of time spent on each task are represented in the section **Work Organization**.
