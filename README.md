@@ -63,6 +63,7 @@ As far as I see it, I succesfully accomplished all three of my target goals. Aft
 
 The next attempt was to try to redisgn the network to have better accuracy on the test split. Note that the approach in [1] is to learn to distinguish between real and fake news by feeding the network with text (body) and title feature, whereas the CNN in [2] does it with image and title. My approach however puts the entire weight solely on the text feature. At least for this datasets, it turns out that training on the text feature has much higher impact on accuracy than title and image feature. After some reasearch and trial and error the network architecture looks like this:
 
+![alt text](https://github.com/acoj1993/fake-news-deeplearning/blob/master/model_extended.h5.png)
 
 Most of the hyper-parameters remained the same as in [1]. 
 The network was trained over 5 epochs with accuracy results on the test split ranging from 0.965 to 0.995. These results significantly beat the results of the CNN in [1]. However, one has to notice the slight increase in complexity (going from two to three branches).
