@@ -17,8 +17,6 @@
                 </b-button>
                 <b-button href="#" variant="warning" v-show="!article.predicted" style="float:right"
                           @click="verifyArticle(article)">Verfiy Article
-                    <!--                    <b-spinner v-bind:disabled="modelPredictionInProgress" v-show="modelPredictionInProgress" small></b-spinner>-->
-                    <!--                    <span class="sr-only">Loading...</span>-->
                 </b-button>
                 <b-button href="#" variant="success" v-show="article.predicted && !article.predictedFake"
                           style="float:right" @click="verifyArticle(article)">Verified!
@@ -28,12 +26,46 @@
                 </b-button>
             </b-card>
         </b-card-group>
+        <b-button @click="addNewArticle()">Add new article</b-button>
 
-        <b-modal id="bv-modal-example" scrollable v-bind:title="this.selectedArticle.title" ok-only>
+        <b-modal id="bv-modal-read-article" scrollable v-bind:title="this.selectedArticle.title" ok-only>
             <p>
                 {{ this.selectedArticle.text }}
             </p>
         </b-modal>
+
+        <b-modal id="bv-modal-new-article" title="Enter your article" hide-footer>
+            <form ref="form">
+                <b-form>
+                    <b-form-group id="input-group-1" label="Article text:" label-for="input-1">
+                        <b-form-textarea
+                                id="input-1"
+                                v-model="userInputArticle.text"
+                                required
+                                rows="25"
+                                placeholder="Enter article text"
+                        ></b-form-textarea>
+                    </b-form-group>
+                    <b-button href="#" variant="success"
+                              v-show="userInputArticle.predicted && !userInputArticle.predictedFake"
+                              style="float:right" @click="verifyArticle(userInputArticle)">Verified!
+                    </b-button>
+                    <b-button href="#" variant="danger"
+                              v-show="userInputArticle.predicted && userInputArticle.predictedFake"
+                              style="float:right" @click="verifyArticle(userInputArticle)">Fake article!
+                    </b-button>
+                    <b-button variant="warning" v-show="!userInputArticle.predicted" style="float:right"
+                              @click="verifyArticle(userInputArticle)">Verify
+                    </b-button>
+                    <b-button @click="$bvModal.hide('bv-modal-new-article')" style="float:left" variant="danger">Cancel
+                    </b-button>
+                </b-form>
+                <!--                <b-card class="mt-3" header="Form Data Result">-->
+                <!--                    <pre class="m-0">{{ form }}</pre>-->
+                <!--                </b-card>-->
+            </form>
+        </b-modal>
+
     </div>
 </template>
 
@@ -49,8 +81,7 @@
         news: Array<Article>;
         selectedArticle: Article | null = null;
         model: LayersModel | null = null;
-
-        // modelPredictionInProgress : boolean = false;
+        userInputArticle: Article;
 
         async created() {
             this.model = await tf.loadLayersModel(
@@ -94,11 +125,16 @@
             ));
 
             this.selectedArticle = this.news[0];
+            this.userInputArticle = new Article(-1, false, "", "", "", false, false)
         }
 
         readArticle(article: Article) {
             this.selectedArticle = article;
-            this.$bvModal.show("bv-modal-example");
+            this.$bvModal.show("bv-modal-read-article");
+        }
+
+        addNewArticle() {
+            this.$bvModal.show("bv-modal-new-article");
         }
 
         verifyArticle(article: Article) {
@@ -123,13 +159,7 @@
                     }
                 }
             }
-
-            // this.updateSpinner(false);
         }
-
-        // updateSpinner(toggle : boolean) {
-        //     this.modelPredictionInProgress = toggle;
-        // }
     }
 
 </script>
